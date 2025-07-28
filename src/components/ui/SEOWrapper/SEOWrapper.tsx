@@ -1,5 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react';
 import { useSEO } from '../../../hooks/useSEO';
 
 interface SEOWrapperProps {
@@ -10,72 +9,99 @@ interface SEOWrapperProps {
 const SEOWrapper: React.FC<SEOWrapperProps> = ({ pageName, children }) => {
   const seoData = useSEO(pageName);
 
-  return (
-    <>
-      <Helmet>
-        {/* Basic Meta Tags */}
-        <title>{seoData.title}</title>
-        <meta name="description" content={seoData.description} />
-        <meta name="keywords" content={seoData.keywords.join(', ')} />
-        <meta name="robots" content={seoData.robots} />
-        <link rel="canonical" href={seoData.canonical} />
+  useEffect(() => {
+    // Update document title
+    document.title = seoData.title;
 
-        {/* Open Graph Tags */}
-        <meta property="og:type" content={seoData.ogType} />
-        <meta property="og:title" content={seoData.ogTitle} />
-        <meta property="og:description" content={seoData.ogDescription} />
-        <meta property="og:image" content={seoData.ogImage} />
-        <meta property="og:url" content={seoData.ogUrl} />
-        <meta property="og:site_name" content="Dr. Caroline Fu, DO - Psychiatrist" />
+    // Helper function to update or create meta tags
+    const updateMetaTag = (name: string, content: string, isProperty?: boolean) => {
+      const selector = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let meta = document.querySelector(selector) as HTMLMetaElement;
+      
+      if (!meta) {
+        meta = document.createElement('meta');
+        if (isProperty) {
+          meta.setAttribute('property', name);
+        } else {
+          meta.setAttribute('name', name);
+        }
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
 
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content={seoData.twitterCard} />
-        <meta name="twitter:title" content={seoData.twitterTitle} />
-        <meta name="twitter:description" content={seoData.twitterDescription} />
-        <meta name="twitter:image" content={seoData.twitterImage} />
+    // Helper function to update or create link tags
+    const updateLinkTag = (rel: string, href: string) => {
+      let link = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement;
+      if (!link) {
+        link = document.createElement('link');
+        link.setAttribute('rel', rel);
+        document.head.appendChild(link);
+      }
+      link.setAttribute('href', href);
+    };
 
-        {/* Medical Practice Specific Meta Tags */}
-        <meta name="geo.region" content="US-MA" />
-        <meta name="geo.placename" content="Cambridge" />
-        <meta name="geo.position" content="42.3736;-71.1097" />
-        <meta name="ICBM" content="42.3736, -71.1097" />
+    // Basic Meta Tags
+    updateMetaTag('description', seoData.description);
+    updateMetaTag('keywords', seoData.keywords.join(', '));
+    updateMetaTag('robots', seoData.robots);
+    updateLinkTag('canonical', seoData.canonical);
 
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {seoData.structuredData}
-        </script>
+    // Open Graph Tags
+    updateMetaTag('og:type', seoData.ogType, true);
+    updateMetaTag('og:title', seoData.ogTitle, true);
+    updateMetaTag('og:description', seoData.ogDescription, true);
+    updateMetaTag('og:image', seoData.ogImage, true);
+    updateMetaTag('og:url', seoData.ogUrl, true);
+    updateMetaTag('og:site_name', 'Dr. Caroline Fu, DO - Psychiatrist', true);
 
-        {/* Additional Medical Practice Meta Tags */}
-        {pageName === 'home' && (
-          <>
-            <meta name="author" content="Dr. Caroline Fu, DO" />
-            <meta name="copyright" content="Dr. Caroline Fu, DO" />
-            <meta name="language" content="English" />
-            <meta name="revisit-after" content="7 days" />
-          </>
-        )}
+    // Twitter Card Tags
+    updateMetaTag('twitter:card', seoData.twitterCard);
+    updateMetaTag('twitter:title', seoData.twitterTitle);
+    updateMetaTag('twitter:description', seoData.twitterDescription);
+    updateMetaTag('twitter:image', seoData.twitterImage);
 
-        {/* Chinese Language Meta Tags */}
-        {pageName === 'chinese' && (
-          <>
-            <meta name="language" content="Chinese" />
-            <meta httpEquiv="Content-Language" content="zh-CN" />
-            <html lang="zh-CN" />
-          </>
-        )}
+    // Medical Practice Specific Meta Tags
+    updateMetaTag('geo.region', 'US-MA');
+    updateMetaTag('geo.placename', 'Cambridge');
+    updateMetaTag('geo.position', '42.3736;-71.1097');
+    updateMetaTag('ICBM', '42.3736, -71.1097');
 
-        {/* Service-Specific Meta Tags */}
-        {(pageName.includes('psychiatry') || pageName.includes('therapy')) && (
-          <>
-            <meta name="medical.condition" content="Mental Health" />
-            <meta name="medical.specialty" content="Psychiatry" />
-            <meta name="audience" content="Patients" />
-          </>
-        )}
-      </Helmet>
-      {children}
-    </>
-  );
+    // Structured Data
+    let structuredDataScript = document.querySelector('script[type="application/ld+json"]');
+    if (!structuredDataScript) {
+      structuredDataScript = document.createElement('script');
+      structuredDataScript.setAttribute('type', 'application/ld+json');
+      document.head.appendChild(structuredDataScript);
+    }
+    structuredDataScript.textContent = seoData.structuredData;
+
+    // Additional Medical Practice Meta Tags for home page
+    if (pageName === 'home') {
+      updateMetaTag('author', 'Dr. Caroline Fu, DO');
+      updateMetaTag('copyright', 'Dr. Caroline Fu, DO');
+      updateMetaTag('language', 'English');
+      updateMetaTag('revisit-after', '7 days');
+    }
+
+    // Chinese Language Meta Tags
+    if (pageName === 'chinese') {
+      updateMetaTag('language', 'Chinese');
+      updateMetaTag('Content-Language', 'zh-CN');
+      document.documentElement.setAttribute('lang', 'zh-CN');
+    } else {
+      document.documentElement.setAttribute('lang', 'en');
+    }
+
+    // Service-Specific Meta Tags
+    if (pageName.includes('psychiatry') || pageName.includes('therapy')) {
+      updateMetaTag('medical.condition', 'Mental Health');
+      updateMetaTag('medical.specialty', 'Psychiatry');
+      updateMetaTag('audience', 'Patients');
+    }
+  }, [seoData, pageName]);
+
+  return <>{children}</>;
 };
 
 export default SEOWrapper;

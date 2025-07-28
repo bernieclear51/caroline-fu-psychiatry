@@ -2,7 +2,6 @@ import React from 'react';
 import { MantineProvider, createTheme } from '@mantine/core';
 import { BrowserRouter } from 'react-router-dom';
 import { Notifications } from '@mantine/notifications';
-import { HelmetProvider } from 'react-helmet-async';
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 import '@mantine/carousel/styles.css';
@@ -64,16 +63,14 @@ const theme = createTheme({
 
 function App() {
   return (
-    <HelmetProvider>
-      <MantineProvider theme={theme}>
-        <Notifications position="top-right" />
-        <BrowserRouter>
-          <Layout>
-            <AppRoutes />
-          </Layout>
-        </BrowserRouter>
-      </MantineProvider>
-    </HelmetProvider>
+    <MantineProvider theme={theme}>
+      <Notifications position="top-right" />
+      <BrowserRouter>
+        <Layout>
+          <AppRoutes />
+        </Layout>
+      </BrowserRouter>
+    </MantineProvider>
   );
 }
 
