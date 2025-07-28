@@ -2,6 +2,7 @@ import React from 'react';
 import { MantineProvider, createTheme } from '@mantine/core';
 import { BrowserRouter } from 'react-router-dom';
 import { Notifications } from '@mantine/notifications';
+import { Analytics } from '@vercel/analytics/react';
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 import '@mantine/carousel/styles.css';
@@ -70,6 +71,7 @@ function App() {
           <AppRoutes />
         </Layout>
       </BrowserRouter>
+      <Analytics />
     </MantineProvider>
   );
 }
