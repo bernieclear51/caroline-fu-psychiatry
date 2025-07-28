@@ -1,0 +1,387 @@
+/* Rainbow Glow Effects - Global Utility Classes */
+/* Apply these classes to any element to add rainbow glow effects */
+
+/* ========================================
+   RAINBOW GLOW KEYFRAME ANIMATIONS
+   ======================================== */
+
+/* Main Rainbow Glow - Standard intensity */
+@keyframes rainbowGlow {
+  0% {
+    box-shadow: 0 8px 32px rgba(255, 0, 0, 0.15), 0 0 20px rgba(255, 0, 0, 0.1);
+  }
+  8.33% {
+    box-shadow: 0 8px 32px rgba(255, 165, 0, 0.15), 0 0 20px rgba(255, 165, 0, 0.1);
+  }
+  16.66% {
+    box-shadow: 0 8px 32px rgba(255, 255, 0, 0.15), 0 0 20px rgba(255, 255, 0, 0.1);
+  }
+  25% {
+    box-shadow: 0 8px 32px rgba(0, 255, 0, 0.15), 0 0 20px rgba(0, 255, 0, 0.1);
+  }
+  33.33% {
+    box-shadow: 0 8px 32px rgba(0, 0, 255, 0.15), 0 0 20px rgba(0, 0, 255, 0.1);
+  }
+  41.66% {
+    box-shadow: 0 8px 32px rgba(75, 0, 130, 0.15), 0 0 20px rgba(75, 0, 130, 0.1);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(238, 130, 238, 0.15), 0 0 20px rgba(238, 130, 238, 0.1);
+  }
+  58.33% {
+    box-shadow: 0 8px 32px rgba(75, 0, 130, 0.15), 0 0 20px rgba(75, 0, 130, 0.1);
+  }
+  66.66% {
+    box-shadow: 0 8px 32px rgba(0, 0, 255, 0.15), 0 0 20px rgba(0, 0, 255, 0.1);
+  }
+  75% {
+    box-shadow: 0 8px 32px rgba(0, 255, 0, 0.15), 0 0 20px rgba(0, 255, 0, 0.1);
+  }
+  83.33% {
+    box-shadow: 0 8px 32px rgba(255, 255, 0, 0.15), 0 0 20px rgba(255, 255, 0, 0.1);
+  }
+  91.66% {
+    box-shadow: 0 8px 32px rgba(255, 165, 0, 0.15), 0 0 20px rgba(255, 165, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 8px 32px rgba(255, 0, 0, 0.15), 0 0 20px rgba(255, 0, 0, 0.1);
+  }
+}
+
+/* Hover Rainbow Glow - Enhanced intensity for hover states */
+@keyframes rainbowGlowHover {
+  0% {
+    box-shadow: 0 12px 48px rgba(255, 0, 0, 0.2), 0 0 30px rgba(255, 0, 0, 0.15);
+  }
+  8.33% {
+    box-shadow: 0 12px 48px rgba(255, 165, 0, 0.2), 0 0 30px rgba(255, 165, 0, 0.15);
+  }
+  16.66% {
+    box-shadow: 0 12px 48px rgba(255, 255, 0, 0.2), 0 0 30px rgba(255, 255, 0, 0.15);
+  }
+  25% {
+    box-shadow: 0 12px 48px rgba(0, 255, 0, 0.2), 0 0 30px rgba(0, 255, 0, 0.15);
+  }
+  33.33% {
+    box-shadow: 0 12px 48px rgba(0, 0, 255, 0.2), 0 0 30px rgba(0, 0, 255, 0.15);
+  }
+  41.66% {
+    box-shadow: 0 12px 48px rgba(75, 0, 130, 0.2), 0 0 30px rgba(75, 0, 130, 0.15);
+  }
+  50% {
+    box-shadow: 0 12px 48px rgba(238, 130, 238, 0.2), 0 0 30px rgba(238, 130, 238, 0.15);
+  }
+  58.33% {
+    box-shadow: 0 12px 48px rgba(75, 0, 130, 0.2), 0 0 30px rgba(75, 0, 130, 0.15);
+  }
+  66.66% {
+    box-shadow: 0 12px 48px rgba(0, 0, 255, 0.2), 0 0 30px rgba(0, 0, 255, 0.15);
+  }
+  75% {
+    box-shadow: 0 12px 48px rgba(0, 255, 0, 0.2), 0 0 30px rgba(0, 255, 0, 0.15);
+  }
+  83.33% {
+    box-shadow: 0 12px 48px rgba(255, 255, 0, 0.2), 0 0 30px rgba(255, 255, 0, 0.15);
+  }
+  91.66% {
+    box-shadow: 0 12px 48px rgba(255, 165, 0, 0.2), 0 0 30px rgba(255, 165, 0, 0.15);
+  }
+  100% {
+    box-shadow: 0 12px 48px rgba(255, 0, 0, 0.2), 0 0 30px rgba(255, 0, 0, 0.15);
+  }
+}
+
+/* Subtle Rainbow Glow - Gentle intensity for background elements */
+@keyframes rainbowGlowSubtle {
+  0% {
+    box-shadow: 0 8px 24px rgba(255, 0, 0, 0.1), 0 0 15px rgba(255, 0, 0, 0.05);
+  }
+  8.33% {
+    box-shadow: 0 8px 24px rgba(255, 165, 0, 0.1), 0 0 15px rgba(255, 165, 0, 0.05);
+  }
+  16.66% {
+    box-shadow: 0 8px 24px rgba(255, 255, 0, 0.1), 0 0 15px rgba(255, 255, 0, 0.05);
+  }
+  25% {
+    box-shadow: 0 8px 24px rgba(0, 255, 0, 0.1), 0 0 15px rgba(0, 255, 0, 0.05);
+  }
+  33.33% {
+    box-shadow: 0 8px 24px rgba(0, 0, 255, 0.1), 0 0 15px rgba(0, 0, 255, 0.05);
+  }
+  41.66% {
+    box-shadow: 0 8px 24px rgba(75, 0, 130, 0.1), 0 0 15px rgba(75, 0, 130, 0.05);
+  }
+  50% {
+    box-shadow: 0 8px 24px rgba(238, 130, 238, 0.1), 0 0 15px rgba(238, 130, 238, 0.05);
+  }
+  58.33% {
+    box-shadow: 0 8px 24px rgba(75, 0, 130, 0.1), 0 0 15px rgba(75, 0, 130, 0.05);
+  }
+  66.66% {
+    box-shadow: 0 8px 24px rgba(0, 0, 255, 0.1), 0 0 15px rgba(0, 0, 255, 0.05);
+  }
+  75% {
+    box-shadow: 0 8px 24px rgba(0, 255, 0, 0.1), 0 0 15px rgba(0, 255, 0, 0.05);
+  }
+  83.33% {
+    box-shadow: 0 8px 24px rgba(255, 255, 0, 0.1), 0 0 15px rgba(255, 255, 0, 0.05);
+  }
+  91.66% {
+    box-shadow: 0 8px 24px rgba(255, 165, 0, 0.1), 0 0 15px rgba(255, 165, 0, 0.05);
+  }
+  100% {
+    box-shadow: 0 8px 24px rgba(255, 0, 0, 0.1), 0 0 15px rgba(255, 0, 0, 0.05);
+  }
+}
+
+/* Button Rainbow Glow - Optimized for interactive elements */
+@keyframes rainbowGlowButton {
+  0% {
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2), 0 0 25px rgba(255, 0, 0, 0.15);
+  }
+  8.33% {
+    box-shadow: 0 4px 20px rgba(255, 165, 0, 0.2), 0 0 25px rgba(255, 165, 0, 0.15);
+  }
+  16.66% {
+    box-shadow: 0 4px 20px rgba(255, 255, 0, 0.2), 0 0 25px rgba(255, 255, 0, 0.15);
+  }
+  25% {
+    box-shadow: 0 4px 20px rgba(0, 255, 0, 0.2), 0 0 25px rgba(0, 255, 0, 0.15);
+  }
+  33.33% {
+    box-shadow: 0 4px 20px rgba(0, 0, 255, 0.2), 0 0 25px rgba(0, 0, 255, 0.15);
+  }
+  41.66% {
+    box-shadow: 0 4px 20px rgba(75, 0, 130, 0.2), 0 0 25px rgba(75, 0, 130, 0.15);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(238, 130, 238, 0.2), 0 0 25px rgba(238, 130, 238, 0.15);
+  }
+  58.33% {
+    box-shadow: 0 4px 20px rgba(75, 0, 130, 0.2), 0 0 25px rgba(75, 0, 130, 0.15);
+  }
+  66.66% {
+    box-shadow: 0 4px 20px rgba(0, 0, 255, 0.2), 0 0 25px rgba(0, 0, 255, 0.15);
+  }
+  75% {
+    box-shadow: 0 4px 20px rgba(0, 255, 0, 0.2), 0 0 25px rgba(0, 255, 0, 0.15);
+  }
+  83.33% {
+    box-shadow: 0 4px 20px rgba(255, 255, 0, 0.2), 0 0 25px rgba(255, 255, 0, 0.15);
+  }
+  91.66% {
+    box-shadow: 0 4px 20px rgba(255, 165, 0, 0.2), 0 0 25px rgba(255, 165, 0, 0.15);
+  }
+  100% {
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2), 0 0 25px rgba(255, 0, 0, 0.15);
+  }
+}
+
+/* Small Rainbow Glow - For small elements like icons */
+@keyframes rainbowGlowSmall {
+  0% {
+    box-shadow: 0 2px 12px rgba(255, 0, 0, 0.15), 0 0 8px rgba(255, 0, 0, 0.1);
+  }
+  8.33% {
+    box-shadow: 0 2px 12px rgba(255, 165, 0, 0.15), 0 0 8px rgba(255, 165, 0, 0.1);
+  }
+  16.66% {
+    box-shadow: 0 2px 12px rgba(255, 255, 0, 0.15), 0 0 8px rgba(255, 255, 0, 0.1);
+  }
+  25% {
+    box-shadow: 0 2px 12px rgba(0, 255, 0, 0.15), 0 0 8px rgba(0, 255, 0, 0.1);
+  }
+  33.33% {
+    box-shadow: 0 2px 12px rgba(0, 0, 255, 0.15), 0 0 8px rgba(0, 0, 255, 0.1);
+  }
+  41.66% {
+    box-shadow: 0 2px 12px rgba(75, 0, 130, 0.15), 0 0 8px rgba(75, 0, 130, 0.1);
+  }
+  50% {
+    box-shadow: 0 2px 12px rgba(238, 130, 238, 0.15), 0 0 8px rgba(238, 130, 238, 0.1);
+  }
+  58.33% {
+    box-shadow: 0 2px 12px rgba(75, 0, 130, 0.15), 0 0 8px rgba(75, 0, 130, 0.1);
+  }
+  66.66% {
+    box-shadow: 0 2px 12px rgba(0, 0, 255, 0.15), 0 0 8px rgba(0, 0, 255, 0.1);
+  }
+  75% {
+    box-shadow: 0 2px 12px rgba(0, 255, 0, 0.15), 0 0 8px rgba(0, 255, 0, 0.1);
+  }
+  83.33% {
+    box-shadow: 0 2px 12px rgba(255, 255, 0, 0.15), 0 0 8px rgba(255, 255, 0, 0.1);
+  }
+  91.66% {
+    box-shadow: 0 2px 12px rgba(255, 165, 0, 0.15), 0 0 8px rgba(255, 165, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 2px 12px rgba(255, 0, 0, 0.15), 0 0 8px rgba(255, 0, 0, 0.1);
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Standard Rainbow Glow - Apply to cards, containers, main elements */
+.rainbow-glow {
+  animation: rainbowGlow 5s ease-in-out infinite;
+}
+
+.rainbow-glow-fast {
+  animation: rainbowGlow 3s ease-in-out infinite;
+}
+
+.rainbow-glow-slow {
+  animation: rainbowGlow 8s ease-in-out infinite;
+}
+
+/* Subtle Rainbow Glow - Apply to background elements, secondary content */
+.rainbow-glow-subtle {
+  animation: rainbowGlowSubtle 6s ease-in-out infinite;
+}
+
+.rainbow-glow-subtle-fast {
+  animation: rainbowGlowSubtle 4s ease-in-out infinite;
+}
+
+.rainbow-glow-subtle-slow {
+  animation: rainbowGlowSubtle 10s ease-in-out infinite;
+}
+
+/* Button Rainbow Glow - Apply to buttons, interactive elements */
+.rainbow-glow-button {
+  animation: rainbowGlowButton 4s ease-in-out infinite;
+}
+
+.rainbow-glow-button-fast {
+  animation: rainbowGlowButton 2s ease-in-out infinite;
+}
+
+.rainbow-glow-button-slow {
+  animation: rainbowGlowButton 6s ease-in-out infinite;
+}
+
+/* Small Rainbow Glow - Apply to icons, small elements */
+.rainbow-glow-small {
+  animation: rainbowGlowSmall 5s ease-in-out infinite;
+}
+
+.rainbow-glow-small-fast {
+  animation: rainbowGlowSmall 3s ease-in-out infinite;
+}
+
+.rainbow-glow-small-slow {
+  animation: rainbowGlowSmall 8s ease-in-out infinite;
+}
+
+/* Hover Effects - Apply these classes for enhanced hover states */
+.rainbow-glow-hover:hover {
+  animation: rainbowGlowHover 2s ease-in-out infinite;
+}
+
+.rainbow-glow-subtle-hover:hover {
+  animation: rainbowGlow 3s ease-in-out infinite;
+}
+
+.rainbow-glow-button-hover:hover {
+  animation: rainbowGlowButton 1.5s ease-in-out infinite;
+}
+
+.rainbow-glow-small-hover:hover {
+  animation: rainbowGlowSmall 2s ease-in-out infinite;
+}
+
+/* Combined Classes - Base effect + hover enhancement */
+.rainbow-glow-interactive {
+  animation: rainbowGlowSubtle 6s ease-in-out infinite;
+}
+
+.rainbow-glow-interactive:hover {
+  animation: rainbowGlow 3s ease-in-out infinite;
+}
+
+.rainbow-glow-button-interactive {
+  animation: rainbowGlowButton 4s ease-in-out infinite;
+}
+
+.rainbow-glow-button-interactive:hover {
+  animation: rainbowGlowButton 2s ease-in-out infinite;
+}
+
+/* Pause Animation - Use to temporarily disable effects */
+.rainbow-glow-paused {
+  animation-play-state: paused;
+}
+
+/* Accessibility - Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .rainbow-glow,
+  .rainbow-glow-fast,
+  .rainbow-glow-slow,
+  .rainbow-glow-subtle,
+  .rainbow-glow-subtle-fast,
+  .rainbow-glow-subtle-slow,
+  .rainbow-glow-button,
+  .rainbow-glow-button-fast,
+  .rainbow-glow-button-slow,
+  .rainbow-glow-small,
+  .rainbow-glow-small-fast,
+  .rainbow-glow-small-slow,
+  .rainbow-glow-hover:hover,
+  .rainbow-glow-subtle-hover:hover,
+  .rainbow-glow-button-hover:hover,
+  .rainbow-glow-small-hover:hover,
+  .rainbow-glow-interactive,
+  .rainbow-glow-interactive:hover,
+  .rainbow-glow-button-interactive,
+  .rainbow-glow-button-interactive:hover {
+    animation: none;
+  }
+}
+
+/* ========================================
+   USAGE EXAMPLES & DOCUMENTATION
+   ======================================== */
+
+/*
+USAGE EXAMPLES:
+
+1. Standard Card with Rainbow Glow:
+   <Card className="rainbow-glow">Content</Card>
+
+2. Button with Interactive Rainbow Effect:
+   <Button className="rainbow-glow-button-interactive">Click Me</Button>
+
+3. Subtle Background Element:
+   <Box className="rainbow-glow-subtle-slow">Background Content</Box>
+
+4. Small Icon with Hover Effect:
+   <ThemeIcon className="rainbow-glow-small rainbow-glow-small-hover">
+     <IconHeart />
+   </ThemeIcon>
+
+5. Fast Pulsing CTA Element:
+   <Card className="rainbow-glow-fast">Important Content</Card>
+
+6. Mantine Component with Custom Class:
+   <Paper className="rainbow-glow-interactive" p="md">
+     Content with rainbow glow
+   </Paper>
+
+INTENSITY LEVELS:
+- Subtle: Very gentle, background elements
+- Standard: Normal intensity, main content
+- Button: Optimized for interactive elements
+- Small: Scaled for icons and small elements
+
+SPEED VARIATIONS:
+- Fast: 2-3 seconds (attention-grabbing)
+- Normal: 4-6 seconds (balanced)
+- Slow: 8-10 seconds (ambient)
+
+HOVER ENHANCEMENTS:
+- Add -hover classes for enhanced hover states
+- Use -interactive classes for combined base + hover effects
+*/

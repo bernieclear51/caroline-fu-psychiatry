@@ -1,0 +1,53 @@
+{
+  "siteName": "Dr. Caroline Fu, DO - Psychiatrist",
+  "siteDescription": "Board-certified adult and child psychiatrist in Cambridge, MA. Harvard & Tufts instructor offering comprehensive mental health services including therapy, medication management, and ADHD/autism care.",
+  "siteUrl": "https://carolinefu.com",
+  "defaultImage": "/images/dr-caroline-fu-og.jpg",
+  "organization": {
+    "name": "Dr. Caroline Fu, DO",
+    "type": "MedicalOrganization",
+    "address": {
+      "streetAddress": "186 Hampshire Street",
+      "addressLocality": "Cambridge",
+      "addressRegion": "MA",
+      "postalCode": "02139",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-617-XXX-XXXX",
+    "email": "info@carolinefu.com",
+    "url": "https://carolinefu.com",
+    "logo": "/images/logo.png",
+    "image": "/images/dr-caroline-fu.jpg",
+    "priceRange": "$$",
+    "paymentAccepted": ["Cash", "Credit Card", "Insurance"],
+    "currenciesAccepted": "USD"
+  },
+  "physician": {
+    "name": "Caroline Fu",
+    "jobTitle": "Psychiatrist",
+    "worksFor": "Dr. Caroline Fu, DO",
+    "medicalSpecialty": ["Psychiatry", "Child and Adolescent Psychiatry"],
+    "alumniOf": ["Harvard Medical School", "Tufts University School of Medicine"],
+    "memberOf": ["American Psychiatric Association", "American Academy of Child & Adolescent Psychiatry"],
+    "image": "/images/dr-caroline-fu.jpg",
+    "url": "https://carolinefu.com/about"
+  },
+  "defaultMeta": {
+    "robots": "index, follow",
+    "viewport": "width=device-width, initial-scale=1",
+    "charset": "utf-8",
+    "language": "en-US"
+  },
+  "socialMedia": {
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@drcarolinefu",
+      "creator": "@drcarolinefu"
+    },
+    "openGraph": {
+      "type": "website",
+      "locale": "en_US",
+      "siteName": "Dr. Caroline Fu, DO - Psychiatrist"
+    }
+  }
+}

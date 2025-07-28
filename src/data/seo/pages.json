@@ -1,0 +1,162 @@
+{
+  "home": {
+    "title": "Dr. Caroline Fu, DO - Psychiatrist in Cambridge, MA | Adult & Child Mental Health",
+    "description": "Board-certified psychiatrist in Cambridge, MA offering comprehensive mental health services for adults and children. Harvard & Tufts instructor. Virtual and in-person appointments available.",
+    "keywords": ["psychiatrist Cambridge MA", "mental health services", "adult psychiatry", "child psychiatry", "Harvard psychiatrist", "Tufts psychiatrist", "therapy Cambridge", "medication management"],
+    "canonical": "/",
+    "ogType": "website",
+    "priority": 1.0,
+    "changeFreq": "weekly",
+    "schema": {
+      "type": "WebPage",
+      "mainEntity": {
+        "type": "MedicalOrganization"
+      }
+    }
+  },
+  "about": {
+    "title": "About Dr. Caroline Fu, DO - Board-Certified Psychiatrist | Cambridge, MA",
+    "description": "Meet Dr. Caroline Fu, board-certified adult and child psychiatrist. Harvard & Tufts instructor with expertise in ADHD, autism, and comprehensive mental health care in Cambridge, MA.",
+    "keywords": ["Dr Caroline Fu psychiatrist", "board certified psychiatrist", "Harvard psychiatrist", "Tufts psychiatrist", "Cambridge psychiatrist", "child psychiatrist", "ADHD specialist"],
+    "canonical": "/about",
+    "ogType": "profile",
+    "priority": 0.9,
+    "changeFreq": "monthly",
+    "schema": {
+      "type": "ProfilePage",
+      "mainEntity": {
+        "type": "Person",
+        "jobTitle": "Psychiatrist"
+      }
+    }
+  },
+  "services": {
+    "title": "Mental Health Services Overview | Dr. Caroline Fu, DO - Cambridge, MA",
+    "description": "Comprehensive mental health services including medication management, therapy, and child/adolescent care. Transparent pricing and insurance information for Cambridge, MA patients.",
+    "keywords": ["mental health services", "psychiatry services", "therapy services", "medication management", "Cambridge mental health", "psychiatric evaluation", "insurance psychiatrist"],
+    "canonical": "/services",
+    "ogType": "website",
+    "priority": 0.9,
+    "changeFreq": "monthly",
+    "schema": {
+      "type": "Service",
+      "serviceType": "Mental Health Services"
+    }
+  },
+  "adult-psychiatry": {
+    "title": "Adult Psychiatry Services | Depression, Anxiety, ADHD Treatment | Cambridge, MA",
+    "description": "Expert adult psychiatric care in Cambridge, MA. Treatment for depression, anxiety, ADHD, bipolar disorder, and more. Medication management and therapy by Harvard-trained psychiatrist.",
+    "keywords": ["adult psychiatry", "depression treatment", "anxiety treatment", "ADHD treatment", "bipolar disorder", "psychiatric medication", "Cambridge adult psychiatrist", "mental health treatment"],
+    "canonical": "/adult-psychiatry",
+    "ogType": "website",
+    "priority": 0.8,
+    "changeFreq": "monthly",
+    "schema": {
+      "type": "MedicalCondition",
+      "name": "Adult Mental Health Conditions"
+    }
+  },
+  "adult-therapy": {
+    "title": "Adult Therapy Services | CBT, DBT, ACT | Cambridge, MA Therapist",
+    "description": "Evidence-based therapy for adults in Cambridge, MA. CBT, DBT, ACT, and trauma-informed care. Asian American mental health specialty. Individual and family therapy available.",
+    "keywords": ["adult therapy", "CBT therapy", "DBT therapy", "ACT therapy", "trauma therapy", "Asian American therapy", "Cambridge therapist", "individual therapy", "family therapy"],
+    "canonical": "/adult-therapy",
+    "ogType": "website",
+    "priority": 0.8,
+    "changeFreq": "monthly",
+    "schema": {
+      "type": "PsychologicalTreatment",
+      "name": "Adult Therapy Services"
+    }
+  },
+  "child-psychiatry": {
+    "title": "Child & Adolescent Psychiatry | ADHD, Autism, Youth Mental Health | Cambridge, MA",
+    "description": "Specialized child and adolescent psychiatric care in Cambridge, MA. ADHD evaluation, autism support, anxiety and depression treatment for children and teens.",
+    "keywords": ["child psychiatry", "adolescent psychiatry", "child ADHD evaluation", "autism evaluation", "child anxiety treatment", "teen depression", "Cambridge child psychiatrist", "pediatric mental health"],
+    "canonical": "/child-psychiatry",
+    "ogType": "website",
+    "priority": 0.8,
+    "changeFreq": "monthly",
+    "schema": {
+      "type": "MedicalCondition",
+      "name": "Child and Adolescent Mental Health"
+    }
+  },
+  "adhd-services": {
+    "title": "ADHD Evaluation & Treatment | Adult & Child ADHD Services | Cambridge, MA",
+    "description": "Comprehensive ADHD evaluation and treatment for children and adults in Cambridge, MA. Medication management, behavioral strategies, and ongoing support by experienced psychiatrist.",
+    "keywords": ["ADHD evaluation", "ADHD treatment", "adult ADHD", "child ADHD", "ADHD testing", "ADHD medication", "Cambridge ADHD specialist", "ADHD diagnosis"],
+    "canonical": "/adhd-services",
+    "ogType": "website",
+    "priority": 0.7,
+    "changeFreq": "monthly",
+    "schema": {
+      "type": "MedicalCondition",
+      "name": "ADHD"
+    }
+  },
+  "autism-services": {
+    "title": "Autism Spectrum Disorder Support | Evaluation & Treatment | Cambridge, MA",
+    "description": "Autism spectrum disorder evaluation, support, and family guidance in Cambridge, MA. Evidence-based approaches for children and adults with ASD.",
+    "keywords": ["autism evaluation", "autism spectrum disorder", "ASD support", "autism treatment", "Cambridge autism specialist", "autism diagnosis", "ASD therapy"],
+    "canonical": "/autism-services",
+    "ogType": "website",
+    "priority": 0.7,
+    "changeFreq": "monthly",
+    "schema": {
+      "type": "MedicalCondition",
+      "name": "Autism Spectrum Disorder"
+    }
+  },
+  "insurance": {
+    "title": "Insurance & Fees | Out-of-Network Psychiatrist | Cambridge, MA",
+    "description": "Transparent pricing and insurance information for psychiatric services in Cambridge, MA. Out-of-network provider with Thrizer partnership for automated benefits processing.",
+    "keywords": ["psychiatrist insurance", "out of network psychiatrist", "psychiatric fees", "mental health insurance", "Cambridge psychiatrist cost", "Thrizer benefits", "psychiatric billing"],
+    "canonical": "/insurance",
+    "ogType": "website",
+    "priority": 0.6,
+    "changeFreq": "quarterly",
+    "schema": {
+      "type": "WebPage",
+      "about": "Insurance and Fee Information"
+    }
+  },
+  "contact": {
+    "title": "Contact Dr. Caroline Fu, DO | Cambridge, MA Psychiatrist Office Information",
+    "description": "Contact information for Dr. Caroline Fu's psychiatry practice in Cambridge, MA. Located at 186 Hampshire Street. Virtual and in-person appointments available.",
+    "keywords": ["contact psychiatrist", "Cambridge psychiatrist office", "186 Hampshire Street", "psychiatrist appointment", "mental health contact"],
+    "canonical": "/contact",
+    "ogType": "website",
+    "priority": 0.5,
+    "changeFreq": "yearly",
+    "schema": {
+      "type": "ContactPage"
+    }
+  },
+  "chinese": {
+    "title": "中文精神科服务 | 付昭医师 | 剑桥市精神科医生",
+    "description": "剑桥市中文精神科服务。付昭医师提供成人和儿童精神健康治疗，包括心理咨询和药物管理。哈佛和塔夫茨大学讲师。",
+    "keywords": ["中文精神科医生", "华人精神科", "剑桥中文心理医生", "付昭医师", "中文心理咨询", "华人心理健康"],
+    "canonical": "/chinese",
+    "ogType": "website",
+    "priority": 0.7,
+    "changeFreq": "monthly",
+    "schema": {
+      "type": "WebPage",
+      "inLanguage": "zh-CN"
+    }
+  },
+  "new-patient": {
+    "title": "New Patient Appointment Request | Dr. Caroline Fu, DO | Cambridge, MA",
+    "description": "Request an appointment with Dr. Caroline Fu, board-certified psychiatrist in Cambridge, MA. New patient intake for adult and child mental health services.",
+    "keywords": ["new patient psychiatrist", "psychiatrist appointment", "mental health appointment", "Cambridge psychiatrist booking", "psychiatric evaluation appointment"],
+    "canonical": "/new-patient",
+    "ogType": "website",
+    "priority": 0.8,
+    "changeFreq": "monthly",
+    "schema": {
+      "type": "MedicalWebPage",
+      "about": "New Patient Appointments"
+    }
+  }
+}

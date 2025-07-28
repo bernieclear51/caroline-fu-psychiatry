@@ -1,0 +1,89 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.5px;
+  color: var(--mantine-color-lavender-7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.logo:hover {
+  color: var(--mantine-color-lavender-6);
+}
+
+.link {
+  display: block;
+  line-height: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--mantine-radius-md);
+  text-decoration: none;
+  color: var(--mantine-color-gray-7);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  background-color: var(--mantine-color-lavender-0);
+  color: var(--mantine-color-lavender-7);
+}
+
+.linkActive,
+.linkActive:hover {
+  background-color: var(--mantine-color-lavender-1);
+  color: var(--mantine-color-lavender-7);
+}
+
+.appointmentButton {
+  background-color: var(--mantine-color-lavender-6);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(179, 116, 255, 0.3);
+}
+
+.appointmentButton:hover {
+  background-color: var(--mantine-color-lavender-7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(179, 116, 255, 0.4);
+}
+
+.menuDropdown {
+  border-radius: var(--mantine-radius-lg);
+  border: 1px solid rgba(179, 116, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(147, 51, 234, 0.1);
+}
+
+.drawerBody {
+  padding-top: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.125rem;
+  }
+  
+  .appointmentButton {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+  }
+  
+  .link {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9375rem;
+  }
+}

@@ -1,0 +1,93 @@
+.footer {
+  background: linear-gradient(135deg, #fafaf9 0%, #f5f3ff 100%);
+  border-top: 1px solid rgba(179, 116, 255, 0.1);
+  margin-top: auto;
+}
+
+.centeredGrid {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.centeredGrid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon {
+  color: var(--mantine-color-lavender-6);
+  flex-shrink: 0;
+}
+
+.footerLink {
+  color: var(--mantine-color-gray-6);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+  display: inline-block;
+  padding: 0.125rem 0;
+}
+
+.footerLink:hover {
+  color: var(--mantine-color-lavender-6);
+}
+
+.ctaButton {
+  background-color: var(--mantine-color-lavender-6);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: var(--mantine-color-lavender-7);
+  transform: translateY(-2px);
+}
+
+.portalButton {
+  border-color: var(--mantine-color-lavender-6);
+  color: var(--mantine-color-lavender-6);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.portalButton:hover {
+  background-color: var(--mantine-color-lavender-6);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.bottomBar {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(179, 116, 255, 0.1);
+}
+
+.bottomLink {
+  transition: color 0.2s ease;
+}
+
+.bottomLink:hover {
+  color: var(--mantine-color-lavender-6);
+}
+
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+  .footer {
+    padding: 0;
+  }
+  
+  .bottomBar {
+    margin-top: 0.25rem;
+    padding-top: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ctaButton {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}

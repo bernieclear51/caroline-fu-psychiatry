@@ -1,0 +1,50 @@
+/* Animation classes */
+.scrollAnimated,
+.sectionTitle,
+.commitmentContent,
+.therapyImage,
+.servicesList,
+.officeContent {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scrollAnimated.visible,
+.sectionTitle.visible,
+.commitmentContent.visible,
+.therapyImage.visible,
+.servicesList.visible,
+.officeContent.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation delays */
+.commitmentContent.visible {
+  transition-delay: 0.2s;
+}
+
+.therapyImage.visible {
+  transition-delay: 0.1s;
+}
+
+.servicesList.visible {
+  transition-delay: 0.3s;
+}
+
+.officeContent.visible {
+  transition-delay: 0.4s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scrollAnimated,
+  .sectionTitle,
+  .commitmentContent,
+  .therapyImage,
+  .servicesList,
+  .officeContent {
+    transform: translateY(20px);
+  }
+}
