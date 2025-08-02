@@ -1,0 +1,128 @@
+/* Ripple Animation */
+@keyframes rippleEffect {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Water ripple animations with different delays */
+.ripple-1 {
+  animation: rippleEffect 4s ease-out infinite;
+}
+
+.ripple-2 {
+  animation: rippleEffect 4s ease-out 0.6s infinite;
+}
+
+.ripple-3 {
+  animation: rippleEffect 4s ease-out 1.2s infinite;
+}
+
+.ripple-4 {
+  animation: rippleEffect 4s ease-out 1.8s infinite;
+}
+
+.ripple-5 {
+  animation: rippleEffect 4s ease-out 2.4s infinite;
+}
+
+.ripple-6 {
+  animation: rippleEffect 4s ease-out 3.0s infinite;
+}
+
+.ripple-7 {
+  animation: rippleEffect 4s ease-out 3.6s infinite;
+}
+
+/* Rock/droplet animation */
+@keyframes rockFall {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  72% {
+    transform: translateY(2px);
+    opacity: 0.3;
+  }
+  74% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+}
+
+.rock {
+  animation: rockFall 4s ease-out infinite;
+}
+
+/* Flower Background Animation */
+@keyframes gentleSway {
+  0% {
+    transform: rotate(-1deg) translateY(-5px);
+  }
+  50% {
+    transform: rotate(1deg) translateY(5px);
+  }
+  100% {
+    transform: rotate(-1deg) translateY(-5px);
+  }
+}
+
+/* Animation for background image selection transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Background container styles */
+.serviceLandingBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.serviceLandingBackground img {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  opacity: 0.1;
+  object-fit: cover;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Apply specific animations based on background type */
+.serviceLandingBackground.flower-bg img {
+  animation: gentleSway 15s ease-in-out infinite, fadeIn 1s ease-in-out;
+}
+
+.serviceLandingBackground.cloud-bg img {
+  animation: gentleWind 60s linear infinite alternate, fadeIn 1s ease-in-out;
+}
+
+.serviceLandingBackground.ripple-bg img {
+  /* The SVG has its own animations for the ripples */
+  animation: fadeIn 1s ease-in-out;
+}

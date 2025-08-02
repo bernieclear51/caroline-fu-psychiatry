@@ -1,5 +1,6 @@
-/* Import Rainbow Glow Effects */
+/* Import Rainbow Glow Effects and Background Animations */
 @import './styles/rainbowGlow.css';
+@import './styles/backgroundAnimations.css';
 
 * {
   box-sizing: border-box;
@@ -63,4 +64,14 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--mantine-color-lavender-5);
+}
+
+/* Horizontal cloud movement animation */
+@keyframes gentleWind {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(10%);
+  }
 }

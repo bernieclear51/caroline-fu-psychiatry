@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 import {
   Box,
   Button,
@@ -24,6 +24,10 @@ import {
 } from '@tabler/icons-react';
 import VirtualInPersonSection, { VirtualInPersonSectionConfig } from '../../ui/VirtualInPersonSection';
 import classes from './ServiceLandingTemplate.module.css';
+import flowerBackground from '../../../assets/background/SVG/FlowerBackgroundSmall.svg';
+import cloudBackground from '../../../assets/background/SVG/SVG/Asset 1cloudbackground.svg';
+import bostonBackground from '../../../assets/background/Asset 1BOSTON.svg';
+import hotAirBalloon from '../../../assets/background/Asset 2HotAir.svg';
 
 export interface FeatureCard {
   title: string;
@@ -89,9 +93,25 @@ interface ServiceLandingTemplateProps {
   config: ServicePageConfig;
 }
 
+// Background types
+type BackgroundType = {
+  src: string;
+  className: string;
+};
+
 const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({ config }) => {
   const theme = useMantineTheme();
   const navigate = useNavigate();
+  
+  // Background options - memoized to prevent recreation on each render
+  const backgrounds = useMemo<BackgroundType[]>(() => [
+    { src: flowerBackground, className: classes.flowerBackground },
+    { src: cloudBackground, className: classes.cloudBackground },
+    { src: bostonBackground, className: classes.bostonBackground }
+  ], []);
+  
+  // State for the selected background
+  const [selectedBackground, setSelectedBackground] = useState<BackgroundType | null>(null);
   
   // Section refs for animations
   const heroCardsRef = useRef<HTMLDivElement>(null);
@@ -105,6 +125,13 @@ const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({ config 
   const servicesCardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Randomly select a background on mount - only once
+    const randomIndex = Math.floor(Math.random() * backgrounds.length);
+    setSelectedBackground(backgrounds[randomIndex]);
+  }, [backgrounds]); // backgrounds is memoized so this will only run once
+  
+  useEffect(() => {
+    // Scroll animation observer
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -212,6 +239,29 @@ const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({ config 
       <Stack gap={0}>
         {/* Hero Section */}
         <Box className={classes.heroSection}>
+          {/* SVG Background */}
+          {/* Background SVG */}
+          {selectedBackground && (
+            <>
+              {/* Hot air balloon - only visible with Boston or Cloud backgrounds */}
+              {(selectedBackground.className === classes.bostonBackground || 
+                selectedBackground.className === classes.cloudBackground) && (
+                <img 
+                  src={hotAirBalloon}
+                  alt=""
+                  aria-hidden="true"
+                  className={classes.hotAirBalloon}
+                />
+              )}
+              <div className={selectedBackground.className}>
+                <img 
+                  src={selectedBackground.src} 
+                  alt="" 
+                  aria-hidden="true" 
+                />
+              </div>
+            </>
+          )}
           <Container size="lg">
             <Text className={classes.heroTitle} ta="center">
               {config.hero.title}

@@ -1,0 +1,20 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gentle blue background -->
+  <rect width="1200" height="800" fill="#f8f9ff" opacity="0.3"/>
+  
+  <!-- Expanding ripples - these will be animated with CSS -->
+  <circle class="ripple ripple-1" cx="600" cy="400" r="50" fill="none" stroke="#b374ff" stroke-width="2" opacity="0.1"/>
+  <circle class="ripple ripple-2" cx="600" cy="400" r="100" fill="none" stroke="#b374ff" stroke-width="2" opacity="0.1"/>
+  <circle class="ripple ripple-3" cx="600" cy="400" r="150" fill="none" stroke="#b374ff" stroke-width="2" opacity="0.1"/>
+  <circle class="ripple ripple-4" cx="600" cy="400" r="200" fill="none" stroke="#b374ff" stroke-width="2" opacity="0.1"/>
+  <circle class="ripple ripple-5" cx="600" cy="400" r="250" fill="none" stroke="#b374ff" stroke-width="2" opacity="0.1"/>
+  <circle class="ripple ripple-6" cx="600" cy="400" r="300" fill="none" stroke="#b374ff" stroke-width="2" opacity="0.1"/>
+  <circle class="ripple ripple-7" cx="600" cy="400" r="350" fill="none" stroke="#b374ff" stroke-width="2" opacity="0.1"/>
+  
+  <!-- Small rock/droplet -->
+  <circle class="rock" cx="600" cy="400" r="8" fill="#b374ff" opacity="0.3"/>
+  
+  <!-- Decorative water elements -->
+  <path d="M200,550 C300,520 350,580 450,550 C550,520 600,580 700,550 C800,520 850,580 950,550 C1050,520 1100,580 1200,550 L1200,800 L200,800 Z" fill="#f1f1ff" opacity="0.2"/>
+  <path d="M200,600 C300,570 350,630 450,600 C550,570 600,630 700,600 C800,570 850,630 950,600 C1050,570 1100,630 1200,600 L1200,800 L200,800 Z" fill="#f5f5ff" opacity="0.2"/>
+</svg>

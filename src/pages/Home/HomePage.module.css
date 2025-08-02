@@ -1,6 +1,15 @@
+.homePageStack {
+  position: relative;
+}
+
 .gridSection {
   padding: 5rem 0;
   background: linear-gradient(135deg, #f8f5ff 0%, #fafaf9 100%);
+}
+
+/* Ensure consistent spacing between sections */
+.homePageStack > * {
+  margin-bottom: 0;
 }
 
 .gridWithLeading {
@@ -70,7 +79,7 @@
 .servicesSection {
   background: linear-gradient(135deg, #fafafa 0%, #f8f5ff 50%, #fafafa 100%);
   position: relative;
-  padding: 5rem 0;
+  padding: 5rem 0 4rem;
   overflow: hidden;
 }
 
@@ -89,7 +98,7 @@
 .aboutSection {
   background: linear-gradient(135deg, #fafafa 0%, #f8f5ff 50%, #fafafa 100%);
   position: relative;
-  padding: 5rem 0;
+  padding: 4rem 0;
   overflow: hidden;
 }
 
@@ -124,31 +133,12 @@
   pointer-events: none;
 }
 
-.ctaSection {
-  background: linear-gradient(135deg, #fafafa 0%, #f8f5ff 50%, #fafafa 100%);
-  position: relative;
-  padding: 5rem 0;
-  overflow: hidden;
-}
-
-.ctaSection::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 20% 80%, rgba(179, 116, 255, 0.03) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(179, 116, 255, 0.03) 0%, transparent 50%);
-  pointer-events: none;
-}
-
 .imageCard {
   background: linear-gradient(135deg, var(--mantine-color-lavender-1) 0%, var(--mantine-color-lavender-2) 100%);
   border: none;
   height: 100%;
   max-height: 600px;
-  max-width: 300px;;
+  max-width: 300px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(179, 116, 255, 0.12);
@@ -230,27 +220,6 @@
   box-shadow: 0 4px 12px rgba(179, 116, 255, 0.2);
 }
 
-.ctaCard {
-  background: white;
-  border: 2px solid var(--mantine-color-lavender-2);
-  box-shadow: 0 20px 60px rgba(179, 116, 255, 0.1);
-  animation: rainbowGlow 6s ease-in-out infinite;
-}
-
-.ctaButton {
-  background: linear-gradient(135deg, var(--mantine-color-lavender-6) 0%, var(--mantine-color-lavender-7) 100%);
-  color: white;
-  font-weight: 600;
-  box-shadow: 0 4px 20px rgba(179, 116, 255, 0.3);
-  transition: all 0.3s ease;
-  animation: rainbowGlowButton 3s ease-in-out infinite;
-}
-
-.ctaButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(179, 116, 255, 0.4);
-  animation: rainbowGlowButton 1.5s ease-in-out infinite;
-}
 
 @media (max-width: 768px) {
   .gridSection,
@@ -279,6 +248,8 @@
   .imageCard {
     min-height: 300px;
     margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -365,19 +336,6 @@
   transform: translateY(0) scale(1);
 }
 
-/* CTA Section Animations */
-.ctaContent {
-  opacity: 0;
-  filter: blur(8px);
-  transform: translateY(35px);
-  transition: all 1.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.ctaContent.visible {
-  opacity: 1;
-  filter: blur(0px);
-  transform: translateY(0);
-}
 
 /* Rainbow Glow Animations - Smooth Reversible Pulse (50% Max Opacity) */
 @keyframes rainbowGlow {
@@ -552,9 +510,8 @@
   .gridSection,
   .servicesSection,
   .aboutSection,
-  .featuresSection,
-  .ctaSection {
-    padding: 2rem 1rem;
+  .featuresSection {
+    padding: 2.5rem 1rem 2rem;
   }
   
   .gridWithLeading {
@@ -563,5 +520,27 @@
   
   .imageCard {
     min-height: 200px;
+    max-width: 80%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+  }
+  
+  /* Service cards optimization */
+  .serviceCard {
+    padding: 0.625rem;
+  }
+  
+  /* Consistent section spacing */
+  .aboutSection, 
+  .servicesSection {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  
+  /* Reduce space between cards */
+  .servicesSection .mantine-SimpleGrid-root {
+    gap: 0.75rem !important;
   }
 }

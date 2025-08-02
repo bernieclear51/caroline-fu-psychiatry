@@ -37,24 +37,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <Card 
       shadow="md" 
-      padding="xl" 
+      padding={0}
       radius="lg" 
       className={classes.card}
       h="100%"
+      p="md"
+      withBorder
+      style={{ padding: '0.75rem 0.625rem !important', margin: 0 }}
     >
       <Stack justify="space-between" h="100%" gap="md">
         <Stack gap="md">
-          {icon && (
-            <ThemeIcon
-              size={56}
-              radius="xl"
-              variant="light"
-              color={color}
-              className={classes.iconWrapper}
-            >
-              {icon}
-            </ThemeIcon>
-          )}
           
           <Title order={3} className={classes.title}>
             {title}

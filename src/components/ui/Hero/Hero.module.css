@@ -5,7 +5,29 @@
   padding: 5rem 0 3rem 0;
   overflow: hidden;
   margin-bottom: 0rem;
-  
+}
+
+/* Flower background styling */
+.flowerBackground {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.flowerBackground img {
+  position: absolute;
+  top: 30%;
+  right: 3%;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15; /* Reduced opacity from 0.25 to 0.15 */
+  transform-origin: bottom center;
+  animation: gentleWind 15s ease-in-out infinite alternate; /* Slowed down animation from 20s to 30s */
 }
 
 .heroSection::before {
@@ -70,6 +92,35 @@
   filter: blur(5px);
   transform: translateY(20px);
   animation: heroDescriptionEnter 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+/* Make "Harvard & Tufts instructor" text larger */
+.heroDescription span {
+  font-weight: 600;
+  font-size: 110%;
+}
+
+.drName {
+  display: none; /* Hide by default (desktop) */
+  font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+  text-align: center;
+  animation: heroDescriptionEnter 1s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(20px);
+}
+
+.mobileImageWrapper {
+  display: none;
+  width: 100%;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.desktopImageWrapper {
+  display: block;
+  flex: 1;
+  margin-left: 4vw;
 }
 
 .heroImage {
@@ -329,6 +380,25 @@
   }
 }
 
+/* Gentle wind animation for flower background */
+@keyframes gentleWind {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-0.3deg) scale(1.01); /* Reduced rotation and scale */
+  }
+  50% {
+    transform: rotate(0.2deg) scale(1.005); /* Reduced rotation and scale */
+  }
+  75% {
+    transform: rotate(-0.1deg) scale(1.015); /* Reduced rotation and scale */
+  }
+  100% {
+    transform: rotate(0.3deg) scale(1.01); /* Reduced rotation and scale */
+  }
+}
+
 /* Scroll Animation Base Classes */
 .scrollAnimated {
   opacity: 0;
@@ -376,8 +446,8 @@
 
 /* Tablet Styles */
 @media (max-width: 768px) {
-  .inner {
-    flex-direction: column;
+  .flowerBackground {
+    display: none; /* Hide flower background on tablet */
     align-items: center;
   }
   
@@ -385,35 +455,7 @@
     max-width: 100%;
     margin-bottom: 2rem;
     text-align: center;
-  }
-  
-  .heroImage {
-    width: 100%;
-    max-width: 200px;
-    min-height: 300px;
-    margin-right: 0;
-  }
-  
-  .mainCTA {
-    justify-content: center !important;
-  }
-}
-
-/* Mobile Styles */
-@media (max-width: 36em) {
-  .heroSection {
-    padding: 2rem 1rem 1.5rem 1rem;
-  }
-  
-  .inner {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .content {
-    max-width: 100%;
-    margin-bottom: 2rem;
-    text-align: center;
+    margin-left: 0;
   }
   
   .heroTitle {
@@ -428,16 +470,21 @@
   }
   
   .heroDescription {
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    line-height: 1.5;
+    font-size: clamp(1rem, 2.8vw, 1.1rem);
+    line-height: 1.4;
     margin-top: 0.5rem;
+    margin-bottom: 1rem;
   }
   
   .heroImage {
-    width: 100%;
-    max-width: 150px;
-    min-height: 200px;
+    width: 280px;
+    height: 180px;
     margin-right: 0;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 8px;
+    max-width: 100%;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   }
   
   .card {
@@ -464,6 +511,39 @@
     font-size: 0.9rem;
     margin-top: 0.5rem;
     padding: 0 1rem;
+  }
+  
+  .plainButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .plainButton button {
+    width: 100% !important;
+    white-space: normal;
+    height: auto;
+    min-height: 54px;
+    padding: 12px 20px;
+    font-size: 1.05rem;
+    letter-spacing: 0;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(179, 116, 255, 0.25);
+  }
+  
+  .heroCardsGrid {
+    margin-top: 30px;
+  }
+  
+  .mobileImageWrapper {
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .mobileImageWrapper .heroImage {
+    margin: 0 auto;
   }
 }
 

@@ -6,16 +6,13 @@ import {
   Title, 
   Text,
   Box,
-  Group,
   Card,
-  ThemeIcon,
   Button,
 } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
 import { 
   IconBrain, 
   IconHeart, 
-  IconUsers, 
   IconStethoscope,
   IconMoodHappy,
   IconHeartHandshake,
@@ -127,7 +124,7 @@ const HomePage: React.FC = () => {
 
   return (
     <SEOWrapper pageName="home">
-      <Stack gap={0}>
+      <Stack gap={0} className={classes.homePageStack}>
         <Hero />
 
         <Box className={classes.servicesSection}>
@@ -230,42 +227,6 @@ const HomePage: React.FC = () => {
 
       {/* Virtual / In-Person Options Section */}
       <VirtualInPersonSection config={defaultVirtualInPersonConfig} />
-
-
-      {/* CTA Section */}
-      <Box className={classes.ctaSection}>
-        <Container size="md">
-          <Card radius="xl" p="xl" className={`${classes.ctaCard} ${classes.ctaContent}`}>
-            <Stack gap="xl" align="center" ta="center">
-              <Title order={2} size="h2">
-                Ready to Begin Your Journey?
-              </Title>
-              <Text size="lg" c="dimmed" maw={500}>
-                Take the first step towards better mental health. Schedule a consultation today.
-              </Text>
-              <Group>
-                <Button
-                  size="lg"
-                  radius="xl"
-                  className={classes.ctaButton}
-                  onClick={() => navigate('/new-patient')}
-                >
-                  Schedule Appointment
-                </Button>
-                <Button
-                  size="lg"
-                  radius="xl"
-                  variant="outline"
-                  color="lavender"
-                  onClick={() => navigate('/contact')}
-                >
-                  Contact Us
-                </Button>
-              </Group>
-            </Stack>
-          </Card>
-        </Container>
-      </Box>
     </Stack>
     </SEOWrapper>
   );

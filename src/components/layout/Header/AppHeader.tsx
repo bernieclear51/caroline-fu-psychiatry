@@ -36,6 +36,12 @@ const AppHeader: React.FC<AppHeaderProps> = ({ opened, toggle }) => {
         { label: 'Psychiatry', link: '/adult-psychiatry' },
         { label: 'Therapy', link: '/adult-therapy' },
         { label: 'Care for Children', link: '/child-psychiatry' },
+      ]
+    },
+    { 
+      label: 'Expertise', 
+      link: '/services',
+      children: [
         { label: 'Women\'s Health', link: '/womens-health' },
         { label: 'ADHD', link: '/adhd-services' },
         { label: 'Autism', link: '/autism-services' },

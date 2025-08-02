@@ -3,6 +3,7 @@ import { Container, Title, Text, Stack, Box, Card, List, ThemeIcon, Button, Simp
 import { useNavigate } from 'react-router-dom';
 import { IconCheck, IconBrain, IconHeart, IconUsers, IconPhone, IconCreditCard, IconShield } from '@tabler/icons-react';
 import SEOWrapper from '../../components/ui/SEOWrapper';
+import cloudBackground from '../../assets/background/SVG/SVG/Asset 1cloudbackground.svg';
 
 const ServicesPage: React.FC = () => {
   const navigate = useNavigate();
@@ -19,6 +20,36 @@ const ServicesPage: React.FC = () => {
           alignItems: 'center'
         }}
       >
+      {/* Cloud background overlay */}
+      <Box
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 0,
+          pointerEvents: 'none',
+          overflow: 'hidden'
+        }}
+      >
+        <img 
+          src={cloudBackground} 
+          alt="" 
+          aria-hidden="true" 
+          style={{
+            position: 'absolute',
+            top: '-5%',
+            left: '-5%',
+            width: '110%',
+            height: '110%',
+            opacity: 0.1,
+            objectFit: 'cover',
+            animation: 'gentleWind 60s linear infinite alternate'
+          }}
+        />
+      </Box>
+      
       <Box
         style={{
           content: '',
@@ -32,7 +63,7 @@ const ServicesPage: React.FC = () => {
         }}
       />
       
-      <Container size="xl" py={40}>
+      <Container size="xl" py={40} style={{ position: 'relative', zIndex: 1 }}>
         <Stack gap="lg">
           {/* Header */}
           <Box ta="center">

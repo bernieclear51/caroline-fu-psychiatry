@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useSEO } from '../../../hooks/useSEO';
+import { useSEOFromSanity } from '../../../hooks/useSEOFromSanity';
 
 interface SEOWrapperProps {
   pageName: string;
@@ -7,7 +7,7 @@ interface SEOWrapperProps {
 }
 
 const SEOWrapper: React.FC<SEOWrapperProps> = ({ pageName, children }) => {
-  const seoData = useSEO(pageName);
+  const seoData = useSEOFromSanity(pageName);
 
   useEffect(() => {
     // Update document title

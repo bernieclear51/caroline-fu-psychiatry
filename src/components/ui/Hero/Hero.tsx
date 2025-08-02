@@ -22,6 +22,8 @@ import { useNavigate } from 'react-router-dom';
 import classes from './Hero.module.css';
 import image from '../../../assets/images/CarolineSmile.jpg';
 import carolineCutOneImage from '../../../assets/images/CarolineInside.jpg';
+import carolineCroppedInside from '../../../assets/images/caroline cropped inside.jpg';
+import flowerBackground from '../../../assets/background/SVG/FlowerBackgroundSmall.svg';
 
 interface HeroConfig {
   title: string;
@@ -43,7 +45,7 @@ interface HeroProps {
 const defaultConfig: HeroConfig = {
   title: 'Adult & Child Psychiatry',
   subtitle: 'in Cambridge, Mass.',
-  description: 'Personalized therapy & med management. <br /> <span style="color: #A51C30">Harvard</span> & <span style="color: #3E8EDE">Tufts</span> instructor. <br /> Now accepting new patients.',
+  description: 'Personalized therapy & med management. <br /> <span style="color: #A51C30; font-size: 110%; font-weight: 600;">Harvard</span> & <span style="color: #3E8EDE; font-size: 110%; font-weight: 600;">Tufts</span> instructor. <br /> Now accepting new patients.',
   buttonText: 'Request Appointment',
   buttonLink: '/new-patient',
   subtext: 'In-person and virtual appointments available. <br />Office located at 186 Hampshire Street, Cambridge, MA.',
@@ -131,6 +133,10 @@ const Hero: React.FC<HeroProps> = ({ config = defaultConfig }) => {
 
   return (
     <Box className={classes.heroSection}>
+      {/* Flower background - only visible on desktop */}
+      <div className={classes.flowerBackground}>
+        <img src={flowerBackground} alt="" aria-hidden="true" />
+      </div>
       <Container size="lg">
         <div className={classes.inner}>
           <div className={classes.content}>
@@ -140,10 +146,23 @@ const Hero: React.FC<HeroProps> = ({ config = defaultConfig }) => {
             <Text className={classes.heroSubtitle} mt="lg">
               {config.subtitle}
             </Text>
+            
+            <div className={classes.mobileImageWrapper}>
+              <Image src={carolineCroppedInside} className={classes.heroImage} alt="Dr. Caroline Fu" />
+            </div>
+            <Text 
+              size="lg" 
+              fw={700}
+              c="lavender" 
+              mt="md" 
+              mb="xs"
+              className={classes.drName}
+            >
+              Dr. Caroline Fu, DO
+            </Text>
             <Text 
               size="lg" 
               c="dimmed" 
-              mt="md" 
               className={classes.heroDescription}
               dangerouslySetInnerHTML={{ __html: config.description }}
             />
@@ -212,7 +231,9 @@ const Hero: React.FC<HeroProps> = ({ config = defaultConfig }) => {
             )}
           </div>
           
-          <Image src={config.heroImage} className={classes.heroImage} alt="Dr. Caroline Fu" />
+          <div className={classes.desktopImageWrapper}>
+            <Image src={config.heroImage} className={classes.heroImage} alt="Dr. Caroline Fu" />
+          </div>
         </div>
         
         {/* Full-width 4x1 grid of cards - Always show */}
